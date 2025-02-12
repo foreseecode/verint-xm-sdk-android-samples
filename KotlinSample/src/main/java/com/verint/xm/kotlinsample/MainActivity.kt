@@ -1,8 +1,8 @@
 package com.verint.xm.kotlinsample
 
 import android.os.Bundle
-import androidx.appcompat.app.AppCompatActivity
 import android.view.View
+import androidx.appcompat.app.AppCompatActivity
 import com.verint.xm.sdk.Core
 import com.verint.xm.sdk.SurveyManagement
 
@@ -15,16 +15,14 @@ class MainActivity : AppCompatActivity() {
 
 
     fun checkEligibility(@Suppress("UNUSED_PARAMETER") view: View) {
-        // Increment the significant event count so that we're eligible for an invite
-        // based on the criteria in exp_configuration.json
-        SurveyManagement.incrementSignificantEventCountWithKey("instant_invite")
-
-        // Launch an invite as a demo
+        // Show a survey invitation to eligible users
         SurveyManagement.checkIfEligibleForSurvey()
     }
 
     fun resetCounters(@Suppress("UNUSED_PARAMETER") view: View) {
-        // Reset the state of the ForeSee SDK
+        // Reset the state of the SDK (for example after showing an invite, so that
+        // the user is eligible to see another one). You wouldn't typically do this
+        // in a production app, but it's useful when testing.
         Core.resetState()
     }
 }
