@@ -3,7 +3,7 @@
 To run these samples, you'll need to import the project in Android studio. First of all, clone the repo
 
 ```
-git checkout git@github.com:foreseecode/foresee-sdk-android-samples.git
+git checkout git@github.com:foreseecode/verint-xm-sdk-android-samples.git
 ```
 
 Then import the project to Android Studio as described below...
