@@ -17,13 +17,14 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void onCheckEligibilityClicked(View view) {
-
-        // Launch an invite as a demo
+        // Show a survey invitation to eligible users
         SurveyManagement.checkIfEligibleForSurvey();
     }
 
     public void resetCounters(View view) {
-        // Reset the SDK
+        // Reset the state of the SDK (for example after showing an invite, so that
+        // the user is eligible to see another one). You wouldn't typically do this
+        // in a production app, but it's useful when testing.
         Core.resetState();
     }
 }
