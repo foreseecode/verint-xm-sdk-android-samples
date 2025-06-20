@@ -244,4 +244,5 @@ app:
     APPCENTER_DESTINATIONS: "*"
 meta:
   bitrise.io:
-    machine_type: standard
+    stack: osx-xcode-edge
+    machine_type_id: g2.mac.large
