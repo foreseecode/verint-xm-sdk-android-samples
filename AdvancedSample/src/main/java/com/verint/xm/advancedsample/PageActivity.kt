@@ -18,7 +18,7 @@ class PageActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_page)
 
-        if (pageId >= 3) {
+        if (pageId >= 7) {
             val button: Button = findViewById(R.id.nextButton)
             button.text = "Done"
             button.setOnClickListener {

@@ -20,5 +20,9 @@
     <string name="invite_desc">Can we send you a brief survey?</string>
     <string name="sure">Sure</string>
 
+    <!-- Required strings -->
+    <string name="EXP_Misc_BrandName">Virginia Lottery</string>
+    <string name="EXP_Misc_ClientPrivacyPolicyURL">https://www.valottery.com/vaprivacystatement</string>
+
 
 </resources>
