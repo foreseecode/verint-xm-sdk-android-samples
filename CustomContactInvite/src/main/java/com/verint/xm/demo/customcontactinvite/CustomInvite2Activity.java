@@ -103,6 +103,13 @@ public class CustomInvite2Activity extends AppCompatActivity {
             }
 
             @Override
+            public void onContactClientError() {
+                Log.d(TAG, "onContactClientError");
+                hideProgress();
+                showInputDialog("There was an error submitting your contact details. Please try again.", null);
+            }
+
+            @Override
             public void onContactMissing() {
                 Log.d(TAG, "onContactMissing");
 
