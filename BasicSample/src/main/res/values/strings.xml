@@ -6,6 +6,7 @@
     <string name="app_name">In Session Sample</string>
     <string name="check_eligibility">Check eligibility</string>
     <string name="reset_counters">Reset state</string>
+    <string name="increment_significant_event">Increment Significant Event (idCardBackAction)</string>
 
 
 </resources>

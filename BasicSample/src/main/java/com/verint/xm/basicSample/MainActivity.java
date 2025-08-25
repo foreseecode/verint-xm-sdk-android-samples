@@ -21,6 +21,11 @@ public class MainActivity extends AppCompatActivity {
         SurveyManagement.checkIfEligibleForSurvey();
     }
 
+    public void onIncrementSignificantEventClicked(View view) {
+        // Increment the significant event counter by 1
+        SurveyManagement.incrementSignificantEventCountWithKey("idCardBackAction");
+    }
+
     public void resetCounters(View view) {
         // Reset the state of the SDK (for example after showing an invite, so that
         // the user is eligible to see another one). You wouldn't typically do this

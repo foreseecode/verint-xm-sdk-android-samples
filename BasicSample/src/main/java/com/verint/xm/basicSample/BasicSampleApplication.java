@@ -22,7 +22,7 @@ public class BasicSampleApplication extends Application implements Core.VerintSD
 		Core.setConfigurationContainer("live");
 
 		// Start the SDK with this app's site key
-		Core.startWithSiteKey(this, "mobsdk-basicsample");
+		Core.startWithSiteKey(this, "bca_app");
 	}
 
 	// Core.VerintSDKListener

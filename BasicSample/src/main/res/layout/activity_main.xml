@@ -34,6 +34,15 @@
         <Button
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
+            android:text="@string/increment_significant_event"
+            android:onClick="onIncrementSignificantEventClicked"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="5dp"
+            style="@style/AppTheme.Button"/>
+
+        <Button
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
             android:text="@string/check_eligibility"
             android:onClick="onCheckEligibilityClicked"
             android:layout_marginTop="5dp"
