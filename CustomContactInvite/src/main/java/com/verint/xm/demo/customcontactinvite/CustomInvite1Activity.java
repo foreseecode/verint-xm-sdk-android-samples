@@ -58,6 +58,13 @@ public class CustomInvite1Activity extends AppCompatActivity {
             }
 
             @Override
+            public void onContactClientError() {
+                Log.d(TAG, "onContactClientError");
+                contactInput.setError("There was an error submitting your contact details. Please try again.");
+                hideProgress();
+            }
+
+            @Override
             public void onContactMissing() {
                 Log.d(TAG, "onContactMissing");
                 contactInput.setError(getString(R.string.FORESEE_contactDetailsEmptyInputError));
