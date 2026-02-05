@@ -12,10 +12,6 @@ buildscript {
     }
 }
 
-plugins  {
-    id("com.android.application") version('7.4.2') apply(false)
-}
-
 allprojects {
     Properties properties = new Properties()
     properties.load(project.rootProject.file('local.properties').newDataInputStream())

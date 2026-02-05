@@ -7,6 +7,17 @@ plugins {
 android {
     compileSdk 36
 
+    // Align Java to 17 (matches Kotlin below)
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_17
+        targetCompatibility JavaVersion.VERSION_17
+    }
+
+    // Tell AGP/KGP to emit Kotlin bytecode for JVM 17
+    kotlinOptions {
+        jvmTarget = '17'
+    }
+
     defaultConfig {
         applicationId "com.verint.xm.advancedsample"
         minSdkVersion 21
