@@ -79,15 +79,11 @@ public class SetContactDetailsActivity extends AppCompatActivity {
         SurveyManagement.setContactDetails(ContactType.PhoneNumber,
                 contactInfoPhone.getText().toString());
 
-        switch (preferredContactType.getCheckedRadioButtonId()) {
-            case R.id.preferredContactTypeEmail:
-                SurveyManagement.setPreferredContactType(ContactType.Email);
-                break;
-            case R.id.preferredContactTypePhoneNumber:
-                SurveyManagement.setPreferredContactType(ContactType.PhoneNumber);
-                break;
+        if (preferredContactType.getCheckedRadioButtonId() == R.id.preferredContactTypeEmail) {
+            SurveyManagement.setPreferredContactType(ContactType.Email);
+        } else if (preferredContactType.getCheckedRadioButtonId() == R.id.preferredContactTypePhoneNumber) {
+            SurveyManagement.setPreferredContactType(ContactType.PhoneNumber);
         }
-
     }
 
     /**
