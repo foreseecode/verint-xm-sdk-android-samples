@@ -16,6 +16,15 @@ plugins  {
     id("com.android.application") version('7.4.2') apply(false)
 }
 
+subprojects {
+    // Workaround for D8/R8 crash with AGP < 8.0 and error_prone_annotations >= 2.24.0
+    configurations.configureEach {
+        resolutionStrategy {
+            force 'com.google.errorprone:error_prone_annotations:2.18.0'
+        }
+    }
+}
+
 allprojects {
     Properties properties = new Properties()
     properties.load(project.rootProject.file('local.properties').newDataInputStream())
