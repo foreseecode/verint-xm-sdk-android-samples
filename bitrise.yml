@@ -203,10 +203,10 @@ workflows:
     - _Clone-Repo
     steps:
       - set-java-version:
-          title: Set java version 11
+          title: Set java version 17
           run_if: .IsCI
           inputs:
-            - set_java_version: '11'
+            - set_java_version: '17'
       - script:
           title: Set up the local.properties
           inputs:
