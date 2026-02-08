@@ -88,7 +88,7 @@ public class CustomInvite2Activity extends AppCompatActivity {
                 });
 
                 View view = snackbarInvite.getView();
-                TextView tv = (TextView) view.findViewById(R.id.snackbar_text);
+                TextView tv = (TextView) view.findViewById(com.google.android.material.R.id.snackbar_text);
                 tv.setTextColor(Color.WHITE);
                 snackbarInvite.show();
             }
@@ -293,15 +293,13 @@ public class CustomInvite2Activity extends AppCompatActivity {
             @Override
             public void onClick(DialogInterface dialog, int which) {
                 ContactType type = ContactType.PhoneNumber;
-                switch (preferredContactType.getCheckedRadioButtonId()) {
-                    case R.id.preferredContactTypeEmail:
-                        type = ContactType.Email;
-                        SurveyManagement.setPreferredContactType(ContactType.Email);
-                        break;
-                    case R.id.preferredContactTypePhoneNumber:
-                        type = ContactType.PhoneNumber;
-                        SurveyManagement.setPreferredContactType(ContactType.PhoneNumber);
-                        break;
+                int radioButtonId = preferredContactType.getCheckedRadioButtonId();
+                if (radioButtonId == R.id.preferredContactTypeEmail) {
+                    type = ContactType.Email;
+                    SurveyManagement.setPreferredContactType(ContactType.Email);
+                } else if (radioButtonId == R.id.preferredContactTypePhoneNumber) {
+                    type = ContactType.PhoneNumber;
+                    SurveyManagement.setPreferredContactType(ContactType.PhoneNumber);
                 }
                 SurveyManagement.setPreferredContactType(type);
                 SurveyManagement.setContactDetails(type, contactInput.getText().toString());
