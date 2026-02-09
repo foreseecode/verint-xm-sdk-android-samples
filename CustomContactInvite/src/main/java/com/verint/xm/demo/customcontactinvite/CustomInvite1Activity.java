@@ -165,15 +165,13 @@ public class CustomInvite1Activity extends AppCompatActivity {
         // For Contact Invite mode, the contact details must be provided before the invite is accepted
         // Let's take them from the UI right now
         ContactType type = ContactType.PhoneNumber;
-        switch (preferredContactType.getCheckedRadioButtonId()) {
-            case R.id.preferredContactTypeEmail:
-                type = ContactType.Email;
-                SurveyManagement.setPreferredContactType(ContactType.Email);
-                break;
-            case R.id.preferredContactTypePhoneNumber:
-                type = ContactType.PhoneNumber;
-                SurveyManagement.setPreferredContactType(ContactType.PhoneNumber);
-                break;
+        int radioButtonId = preferredContactType.getCheckedRadioButtonId();
+        if (radioButtonId == R.id.preferredContactTypeEmail) {
+            type = ContactType.Email;
+            SurveyManagement.setPreferredContactType(ContactType.Email);
+        } else if (radioButtonId == R.id.preferredContactTypePhoneNumber) {
+            type = ContactType.PhoneNumber;
+            SurveyManagement.setPreferredContactType(ContactType.PhoneNumber);
         }
         SurveyManagement.setPreferredContactType(type);
         SurveyManagement.setContactDetails(type, contactInput.getText().toString());

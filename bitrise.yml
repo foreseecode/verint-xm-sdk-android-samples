@@ -203,10 +203,10 @@ workflows:
     - _Clone-Repo
     steps:
       - set-java-version:
-          title: Set java version 11
+          title: Set java version 17
           run_if: .IsCI
           inputs:
-            - set_java_version: '11'
+            - set_java_version: '17'
       - script:
           title: Set up the local.properties
           inputs:
@@ -245,5 +245,5 @@ app:
 meta:
   bitrise.io:
     machine_type: standard
-    stack: osx-xcode-edge
-    machine_type_id: g2.mac.large
+    stack: linux-docker-android-22.04
+    machine_type_id: g2.linux.large
