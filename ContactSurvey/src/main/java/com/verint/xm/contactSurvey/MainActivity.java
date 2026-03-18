@@ -1,8 +1,11 @@
 package com.verint.xm.contactSurvey;
 
 import android.content.Intent;
+import android.os.Build;
 import android.os.Bundle;
 import androidx.appcompat.app.AppCompatActivity;
+
+import android.util.TypedValue;
 import android.view.View;
 
 import com.verint.xm.sdk.Core;
@@ -17,6 +20,21 @@ public class MainActivity extends AppCompatActivity {
         
         // Do normal UI setup
         setContentView(R.layout.main);
+
+        // Apply actionBarSize padding for Android 15+
+        if(Build.VERSION.SDK_INT >= Build.VERSION_CODES.VANILLA_ICE_CREAM) {
+            View rootView = findViewById(R.id.main_layout);
+            TypedValue tv = new TypedValue();
+            if (getTheme().resolveAttribute(android.R.attr.actionBarSize, tv, true)) {
+                int actionBarSize = TypedValue.complexToDimensionPixelSize(tv.data, getResources().getDisplayMetrics());
+                rootView.setPadding(
+                        rootView.getPaddingLeft(),
+                        actionBarSize,
+                        rootView.getPaddingRight(),
+                        rootView.getPaddingBottom()
+                );
+            }
+        }
 
         // Back button
         getSupportActionBar().setDisplayHomeAsUpEnabled(false);
