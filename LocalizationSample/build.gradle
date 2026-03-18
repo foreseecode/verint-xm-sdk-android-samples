@@ -21,11 +21,7 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
     }
-    
-    lint {
-        abortOnError false
-    }
-    
+
     namespace 'com.verint.xm.localizationSample'
 }
 
