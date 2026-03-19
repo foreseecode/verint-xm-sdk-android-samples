@@ -2,15 +2,16 @@ package com.verint.xm.advancedsample
 
 import android.content.Intent
 import android.os.Bundle
-import androidx.appcompat.app.AppCompatActivity
 import android.view.View
 import com.verint.xm.sdk.Core
 
-class MainActivity : AppCompatActivity() {
+class MainActivity : BaseActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.main)
+
+        setupToolbar()
     }
 
     fun resetCounters(@Suppress("UNUSED_PARAMETER") view: View) {

@@ -1,14 +1,13 @@
 package com.verint.xm.advancedsample
 
 import android.content.Intent
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
 import android.widget.Button
 import android.widget.TextView
 import com.verint.xm.sdk.SurveyManagement
 
-class PageActivity : AppCompatActivity() {
+class PageActivity : BaseActivity() {
 
     companion object {
         var pageId = 1
@@ -30,19 +29,14 @@ class PageActivity : AppCompatActivity() {
         textView.text = "Page #: " + pageId++
 
         // action bar
-        supportActionBar!!.title = "Page Views Sample"
-        supportActionBar!!.setDisplayHomeAsUpEnabled(true)
+        setupToolbar(showBackButton = true)
+        supportActionBar?.title = "Page Views Sample"
     }
 
     override fun onResume() {
         super.onResume()
 
         SurveyManagement.checkIfEligibleForSurvey()
-    }
-
-    override fun onSupportNavigateUp(): Boolean {
-        onBackPressed()
-        return true
     }
 
     @Suppress("UNUSED_VARIABLE")

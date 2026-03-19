@@ -47,14 +47,6 @@ Make a Contact Survey app QA build
 
 Make a Custom Invite app QA build
 
-### android build_dba_sample_qa
-
-```sh
-[bundle exec] fastlane android build_dba_sample_qa
-```
-
-Make a Dba Sample app QA build
-
 ### android build_feedback_sample_qa
 
 ```sh

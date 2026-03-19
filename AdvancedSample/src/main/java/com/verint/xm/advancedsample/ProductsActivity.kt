@@ -1,6 +1,5 @@
 package com.verint.xm.advancedsample
 
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import com.verint.xm.advancedsample.customInvite.CardData
 import com.verint.xm.advancedsample.customInvite.InviteCardData
@@ -13,7 +12,7 @@ import com.verint.xm.sdk.common.configuration.EligibleMeasureConfigurations
 import com.verint.xm.sdk.common.storyEngine.listeners.CustomInSessionInviteListener
 
 
-class ProductsActivity : AppCompatActivity() {
+class ProductsActivity : BaseActivity() {
 
     companion object {
         const val TAG: String = "ProductsActivity"
@@ -34,8 +33,8 @@ class ProductsActivity : AppCompatActivity() {
         setupCustomInvite()
 
         // action bar
-        supportActionBar!!.title = "Custom Invite Sample"
-        supportActionBar!!.setDisplayHomeAsUpEnabled(true)
+        setupToolbar(showBackButton = true)
+        supportActionBar?.title = "Custom Invite Sample"
     }
 
     override fun onResume() {
@@ -48,12 +47,6 @@ class ProductsActivity : AppCompatActivity() {
         super.onDestroy()
 
         SurveyManagement.setInviteListener(null)
-    }
-
-
-    override fun onSupportNavigateUp(): Boolean {
-        onBackPressed()
-        return true
     }
 
     private fun setupCustomInvite() {

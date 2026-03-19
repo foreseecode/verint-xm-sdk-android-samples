@@ -16,7 +16,7 @@ import com.verint.xm.sdk.common.configuration.ContactType;
 import com.verint.xm.sdk.common.configuration.EligibleMeasureConfigurations;
 import com.verint.xm.sdk.common.storyEngine.listeners.CustomContactInviteListener;
 
-public class CustomInvite1Activity extends AppCompatActivity {
+public class CustomInvite1Activity extends BaseActivity {
 
     private static final String TAG = "CustomInvite1Activity";
 
@@ -34,8 +34,7 @@ public class CustomInvite1Activity extends AppCompatActivity {
         contactInput = (EditText)findViewById(R.id.contactInput);
         preferredContactType = (RadioGroup)findViewById(R.id.preferredContactType);
 
-        // Back button
-        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        setupToolbar(true);
 
         SurveyManagement.setInviteListener(new CustomContactInviteListener() {
 

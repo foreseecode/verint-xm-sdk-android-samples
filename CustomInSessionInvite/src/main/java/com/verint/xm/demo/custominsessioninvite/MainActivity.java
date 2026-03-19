@@ -1,11 +1,8 @@
 package com.verint.xm.demo.custominsessioninvite;
 
 import android.app.ProgressDialog;
-import android.os.Build;
 import android.os.Bundle;
-import androidx.appcompat.app.AppCompatActivity;
 import android.util.Log;
-import android.util.TypedValue;
 import android.view.View;
 import android.widget.Toast;
 import com.verint.xm.sdk.Core;
@@ -13,7 +10,7 @@ import com.verint.xm.sdk.SurveyManagement;
 import com.verint.xm.sdk.common.configuration.EligibleMeasureConfigurations;
 import com.verint.xm.sdk.common.storyEngine.listeners.CustomInSessionInviteListener;
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends BaseActivity {
 
     private ProgressDialog progressDialog;
     private static final String TAG = "MainActivity";
@@ -22,23 +19,7 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        // Back button
-        getSupportActionBar().setDisplayHomeAsUpEnabled(false);
-
-        // Apply actionBarSize padding for Android 15+
-        if(Build.VERSION.SDK_INT >= Build.VERSION_CODES.VANILLA_ICE_CREAM) {
-            View rootView = findViewById(R.id.main_layout);
-            TypedValue tv = new TypedValue();
-            if (getTheme().resolveAttribute(android.R.attr.actionBarSize, tv, true)) {
-                int actionBarSize = TypedValue.complexToDimensionPixelSize(tv.data, getResources().getDisplayMetrics());
-                rootView.setPadding(
-                        rootView.getPaddingLeft(),
-                        actionBarSize,
-                        rootView.getPaddingRight(),
-                        rootView.getPaddingBottom()
-                );
-            }
-        }
+        setupToolbar(false);
 
         SurveyManagement.setInviteListener(new CustomInSessionInviteListener() {
             @Override
