@@ -26,7 +26,7 @@ import java.util.Locale;
 import java.util.Timer;
 import java.util.TimerTask;
 
-public class CustomInvite2Activity extends AppCompatActivity {
+public class CustomInvite2Activity extends BaseActivity {
 
     private static final String TAG = "CustomInvite2Activity";
 
@@ -44,8 +44,7 @@ public class CustomInvite2Activity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_custom_invite_2);
 
-        // Back button
-        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        setupToolbar(true);
     }
 
     public void launchCustomInvite2(View view) {

@@ -1,11 +1,13 @@
 package com.verint.xm.demo.custominsessioninvite;
 
 import android.app.ProgressDialog;
-import android.os.Build;
 import android.os.Bundle;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
+import androidx.core.graphics.Insets;
+import androidx.core.view.ViewCompat;
+import androidx.core.view.WindowInsetsCompat;
 import android.util.Log;
-import android.util.TypedValue;
 import android.view.View;
 import android.widget.Toast;
 import com.verint.xm.sdk.Core;
@@ -22,23 +24,17 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        // Back button
-        getSupportActionBar().setDisplayHomeAsUpEnabled(false);
-
-        // Apply actionBarSize padding for Android 15+
-        if(Build.VERSION.SDK_INT >= Build.VERSION_CODES.VANILLA_ICE_CREAM) {
-            View rootView = findViewById(R.id.main_layout);
-            TypedValue tv = new TypedValue();
-            if (getTheme().resolveAttribute(android.R.attr.actionBarSize, tv, true)) {
-                int actionBarSize = TypedValue.complexToDimensionPixelSize(tv.data, getResources().getDisplayMetrics());
-                rootView.setPadding(
-                        rootView.getPaddingLeft(),
-                        actionBarSize,
-                        rootView.getPaddingRight(),
-                        rootView.getPaddingBottom()
-                );
-            }
-        }
+        Toolbar toolbar = findViewById(R.id.toolbar);
+        // Toolbar is used as the ActionBar to show the activity title
+        setSupportActionBar(toolbar);
+        // Expand the Toolbar top padding to equal the status bar height, so the Toolbar background fills behind the status bar.
+        // Required by API 35+.
+        ViewCompat.setOnApplyWindowInsetsListener(toolbar, (v, windowInsets) -> {
+            Insets statusBar = windowInsets.getInsets(WindowInsetsCompat.Type.statusBars());
+            v.setPadding(v.getPaddingLeft(), statusBar.top,
+                    v.getPaddingRight(), v.getPaddingBottom());
+            return windowInsets;
+        });
 
         SurveyManagement.setInviteListener(new CustomInSessionInviteListener() {
             @Override

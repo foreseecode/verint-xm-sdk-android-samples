@@ -1,12 +1,11 @@
 package com.verint.xm.advancedsample
 
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
 import android.widget.TextView
 import com.verint.xm.sdk.SurveyManagement
 
-class SignificantEventActivity : AppCompatActivity() {
+class SignificantEventActivity : BaseActivity() {
 
     private var customEvent: Int = 0
         set(value) {
@@ -23,8 +22,8 @@ class SignificantEventActivity : AppCompatActivity() {
 
 
         // action bar
-        supportActionBar!!.title = "Significant Event Sample"
-        supportActionBar!!.setDisplayHomeAsUpEnabled(true)
+        setupToolbar(showBackButton = true)
+        supportActionBar?.title = "Significant Event Sample"
     }
 
     fun onIncrementClicked(@Suppress("UNUSED_PARAMETER") view: View) {
@@ -36,10 +35,5 @@ class SignificantEventActivity : AppCompatActivity() {
 
         // Launch an invite as a demo
         SurveyManagement.checkIfEligibleForSurvey()
-    }
-
-    override fun onSupportNavigateUp(): Boolean {
-        onBackPressed()
-        return true
     }
 }

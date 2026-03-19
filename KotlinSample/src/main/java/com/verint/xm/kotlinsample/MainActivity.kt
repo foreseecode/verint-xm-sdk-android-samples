@@ -1,10 +1,12 @@
 package com.verint.xm.kotlinsample
 
-import android.os.Build
 import android.os.Bundle
-import android.util.TypedValue
 import android.view.View
 import androidx.appcompat.app.AppCompatActivity
+import androidx.appcompat.widget.Toolbar
+import androidx.core.graphics.Insets
+import androidx.core.view.ViewCompat
+import androidx.core.view.WindowInsetsCompat
 import com.verint.xm.sdk.Core
 import com.verint.xm.sdk.SurveyManagement
 
@@ -14,23 +16,15 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.main)
 
-
-        // Apply actionBarSize padding for Android 15+
-        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.VANILLA_ICE_CREAM) {
-            val rootView = findViewById<View?>(R.id.main_layout)
-            val tv = TypedValue()
-            if (getTheme().resolveAttribute(android.R.attr.actionBarSize, tv, true)) {
-                val actionBarSize = TypedValue.complexToDimensionPixelSize(
-                    tv.data,
-                    getResources().getDisplayMetrics()
-                )
-                rootView.setPadding(
-                    rootView.getPaddingLeft(),
-                    actionBarSize,
-                    rootView.getPaddingRight(),
-                    rootView.getPaddingBottom()
-                )
-            }
+        val toolbar = findViewById<Toolbar>(R.id.toolbar)
+        // Toolbar is used as the ActionBar to show the activity title
+        setSupportActionBar(toolbar)
+        // Expand the Toolbar top padding to equal the status bar height, so the Toolbar background fills behind the status bar.
+        // Required by API 35+.
+        ViewCompat.setOnApplyWindowInsetsListener(toolbar) { v, windowInsets ->
+            val statusBar = windowInsets.getInsets(WindowInsetsCompat.Type.statusBars())
+            v.setPadding(v.paddingLeft, statusBar.top, v.paddingRight, v.paddingBottom)
+            windowInsets
         }
     }
 
