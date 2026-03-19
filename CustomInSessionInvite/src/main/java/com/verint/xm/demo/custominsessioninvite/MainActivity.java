@@ -2,11 +2,6 @@ package com.verint.xm.demo.custominsessioninvite;
 
 import android.app.ProgressDialog;
 import android.os.Bundle;
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.appcompat.widget.Toolbar;
-import androidx.core.graphics.Insets;
-import androidx.core.view.ViewCompat;
-import androidx.core.view.WindowInsetsCompat;
 import android.util.Log;
 import android.view.View;
 import android.widget.Toast;
@@ -15,7 +10,7 @@ import com.verint.xm.sdk.SurveyManagement;
 import com.verint.xm.sdk.common.configuration.EligibleMeasureConfigurations;
 import com.verint.xm.sdk.common.storyEngine.listeners.CustomInSessionInviteListener;
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends BaseActivity {
 
     private ProgressDialog progressDialog;
     private static final String TAG = "MainActivity";
@@ -24,17 +19,7 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        Toolbar toolbar = findViewById(R.id.toolbar);
-        // Toolbar is used as the ActionBar to show the activity title
-        setSupportActionBar(toolbar);
-        // Expand the Toolbar top padding to equal the status bar height, so the Toolbar background fills behind the status bar.
-        // Required by API 35+.
-        ViewCompat.setOnApplyWindowInsetsListener(toolbar, (v, windowInsets) -> {
-            Insets statusBar = windowInsets.getInsets(WindowInsetsCompat.Type.statusBars());
-            v.setPadding(v.getPaddingLeft(), statusBar.top,
-                    v.getPaddingRight(), v.getPaddingBottom());
-            return windowInsets;
-        });
+        setupToolbar(false);
 
         SurveyManagement.setInviteListener(new CustomInSessionInviteListener() {
             @Override
