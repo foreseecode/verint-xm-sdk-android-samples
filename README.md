@@ -69,12 +69,6 @@ This example shows how to use localization in the SDK. It's possible not only to
 
 ---
 
-## DBA Sample
-
-This example shows how to use DBA module. The recording is started using the request recording API provided in the SDK. Also shown is the mask view API provided by the SDK. This mask view is demonstrated on an imageview.
-
----
-
 ## Authenticating with the package repository
 
 You will need to authenticate with GitHub Packages to download our library.
