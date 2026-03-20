@@ -125,26 +125,6 @@ workflows:
     before_run:
     - _Setup-For-All-Workflows
     - _Clone-Scripts-Repo
-  Build-DbaSample-QA:
-    steps:
-    - fastlane:
-        title: Run fastlane build_dba_sample_qa
-        inputs:
-        - verbose_log: 'yes'
-        - lane: build_dba_sample_qa
-        is_always_run: true
-    - deploy-to-bitrise-io:
-        title: Deploy the QA dir to bitrise
-        inputs:
-        - deploy_path: "$BITRISE_DEPLOY_DIR_FOR_QA"
-        is_always_run: false
-    envs:
-    - opts:
-        is_expand: false
-      BITRISE_DEPLOY_DIR_FOR_QA: "./DbaSample/build/outputs/apk/debug/"
-    before_run:
-    - _Setup-For-All-Workflows
-    - _Clone-Scripts-Repo
   Build-KotlinSample-QA:
     steps:
     - fastlane:
@@ -194,7 +174,6 @@ workflows:
       - Build-BasicSample-QA
       - Build-ContactSurvey-QA
       - Build-CustomInvite-QA
-      - Build-DbaSample-QA
       - Build-KotlinSample-QA
       - Build-LocalizationSample-QA
 

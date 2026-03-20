@@ -2,7 +2,6 @@ package com.verint.xm.demo.custominsessioninvite;
 
 import android.app.ProgressDialog;
 import android.os.Bundle;
-import androidx.appcompat.app.AppCompatActivity;
 import android.util.Log;
 import android.view.View;
 import android.widget.Toast;
@@ -11,7 +10,7 @@ import com.verint.xm.sdk.SurveyManagement;
 import com.verint.xm.sdk.common.configuration.EligibleMeasureConfigurations;
 import com.verint.xm.sdk.common.storyEngine.listeners.CustomInSessionInviteListener;
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends BaseActivity {
 
     private ProgressDialog progressDialog;
     private static final String TAG = "MainActivity";
@@ -20,8 +19,7 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        // Back button
-        getSupportActionBar().setDisplayHomeAsUpEnabled(false);
+        setupToolbar(false);
 
         SurveyManagement.setInviteListener(new CustomInSessionInviteListener() {
             @Override

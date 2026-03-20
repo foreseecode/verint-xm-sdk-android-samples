@@ -2,14 +2,13 @@ package com.verint.xm.contactSurvey;
 
 import android.content.Intent;
 import android.os.Bundle;
-import androidx.appcompat.app.AppCompatActivity;
 import android.view.View;
 
 import com.verint.xm.sdk.Core;
 import com.verint.xm.sdk.SurveyManagement;
 
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends BaseActivity {
 	
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -18,8 +17,7 @@ public class MainActivity extends AppCompatActivity {
         // Do normal UI setup
         setContentView(R.layout.main);
 
-        // Back button
-        getSupportActionBar().setDisplayHomeAsUpEnabled(false);
+        setupToolbar(false);
     }
 
     @Override

@@ -2,18 +2,20 @@ package com.verint.xm.basicSample;
 
 
 import android.os.Bundle;
-import androidx.appcompat.app.AppCompatActivity;
 import android.view.View;
 
 import com.verint.xm.sdk.Core;
 import com.verint.xm.sdk.SurveyManagement;
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends BaseActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        setupToolbar(false);
+
     }
 
     public void onCheckEligibilityClicked(View view) {

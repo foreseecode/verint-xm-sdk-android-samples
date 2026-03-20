@@ -2,15 +2,16 @@ package com.verint.xm.kotlinsample
 
 import android.os.Bundle
 import android.view.View
-import androidx.appcompat.app.AppCompatActivity
 import com.verint.xm.sdk.Core
 import com.verint.xm.sdk.SurveyManagement
 
-class MainActivity : AppCompatActivity() {
+class MainActivity : BaseActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.main)
+
+        setupToolbar()
     }
 
 

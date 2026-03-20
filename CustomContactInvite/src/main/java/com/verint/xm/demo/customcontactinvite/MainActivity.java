@@ -2,19 +2,17 @@ package com.verint.xm.demo.customcontactinvite;
 
 import android.content.Intent;
 import android.os.Bundle;
-import androidx.appcompat.app.AppCompatActivity;
 import android.view.View;
 import com.verint.xm.sdk.Core;
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends BaseActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        // Back button
-        getSupportActionBar().setDisplayHomeAsUpEnabled(false);
+        setupToolbar(false);
     }
 
     public void launchCustomInvite1Activity(View view) {
