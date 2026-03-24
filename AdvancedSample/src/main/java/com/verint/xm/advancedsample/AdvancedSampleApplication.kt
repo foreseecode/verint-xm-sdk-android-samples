@@ -12,6 +12,7 @@ class AdvancedSampleApplication : Application() {
 
         // Notify ForeSee SDK of application start
         Core.setDebugLogEnabled(true)
+        Core.setUserId("SJL - DT Event test")
         Core.start(this)
     }
 }

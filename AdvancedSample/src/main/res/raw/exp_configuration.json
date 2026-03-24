@@ -1,7 +1,8 @@
 {
+	"customerId": "iJRdWzEqNatz7F3INKB7qg==",
 	"notificationType": "IN_SESSION",
 	"cppParameters": {
-		"sample_app": "Kotlin Sample CPP"
+		"sample_app": "DT Events Sample CPP"
 	},
 	"invite": {
 		"logo": "exp_logo",
