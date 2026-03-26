@@ -1,12 +1,12 @@
-package com.verint.xm.advancedsample
+package com.verint.xm.rulesenginesample
 
 import android.os.Bundle
-import com.verint.xm.advancedsample.customInvite.CardData
-import com.verint.xm.advancedsample.customInvite.InviteCardData
-import com.verint.xm.advancedsample.customInvite.ProductCardData
+import com.verint.xm.rulesenginesample.customInvite.CardData
+import com.verint.xm.rulesenginesample.customInvite.InviteCardData
+import com.verint.xm.rulesenginesample.customInvite.ProductCardData
 import android.util.Log
 import android.view.View
-import com.verint.xm.advancedsample.customInvite.Adapter
+import com.verint.xm.rulesenginesample.customInvite.Adapter
 import com.verint.xm.sdk.SurveyManagement
 import com.verint.xm.sdk.common.configuration.EligibleMeasureConfigurations
 import com.verint.xm.sdk.common.storyEngine.listeners.CustomInSessionInviteListener

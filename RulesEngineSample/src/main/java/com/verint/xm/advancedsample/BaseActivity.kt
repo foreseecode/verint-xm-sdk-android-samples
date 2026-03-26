@@ -1,4 +1,4 @@
-package com.verint.xm.advancedsample
+package com.verint.xm.rulesenginesample
 
 import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.widget.Toolbar

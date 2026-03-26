@@ -1,11 +1,11 @@
-package com.verint.xm.advancedsample.customInvite
+package com.verint.xm.rulesenginesample.customInvite
 
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.TextView
-import com.verint.xm.advancedsample.R
+import com.verint.xm.rulesenginesample.R
 
 
 class Adapter (private val cardList: List<CardData>): androidx.recyclerview.widget.RecyclerView.Adapter<CardViewHolder>() {

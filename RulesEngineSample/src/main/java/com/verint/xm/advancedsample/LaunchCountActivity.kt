@@ -1,4 +1,4 @@
-package com.verint.xm.advancedsample
+package com.verint.xm.rulesenginesample
 
 import android.os.Bundle
 import com.verint.xm.sdk.SurveyManagement

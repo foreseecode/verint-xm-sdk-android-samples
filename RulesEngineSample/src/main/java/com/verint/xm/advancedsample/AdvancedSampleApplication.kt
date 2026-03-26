@@ -1,11 +1,11 @@
-package com.verint.xm.advancedsample
+package com.verint.xm.rulesenginesample
 
 import android.app.Activity
 import android.app.Application
 import android.content.Intent
 import com.verint.xm.sdk.Core
 
-class AdvancedSampleApplication : Application() {
+class RulesEngineSampleApplication : Application() {
 
     override fun onCreate() {
         super.onCreate()

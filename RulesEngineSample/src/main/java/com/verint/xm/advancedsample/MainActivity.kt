@@ -1,4 +1,4 @@
-package com.verint.xm.advancedsample
+package com.verint.xm.rulesenginesample
 
 import android.content.Intent
 import android.os.Bundle

@@ -1,4 +1,4 @@
-package com.verint.xm.advancedsample.customInvite
+package com.verint.xm.rulesenginesample.customInvite
 
 enum class DataType {
     PRODUCT_TYPE, INVITE_TYPE;
