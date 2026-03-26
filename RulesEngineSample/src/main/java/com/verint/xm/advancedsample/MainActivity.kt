@@ -4,6 +4,7 @@ import android.content.Intent
 import android.os.Bundle
 import android.view.View
 import com.verint.xm.sdk.Core
+import com.verint.xm.sdk.StoryEngine
 
 class MainActivity : BaseActivity() {
 
@@ -36,16 +37,15 @@ class MainActivity : BaseActivity() {
         startActivity(intent)
     }
 
-    fun onSignificantEventClicked(@Suppress("UNUSED_PARAMETER") view: View) {
+    fun onPropertyClicked(@Suppress("UNUSED_PARAMETER") view: View) {
         Core.resetState()
 
         // Invite will be triggered after 5 launch count
-        val intent = Intent(this, SignificantEventActivity::class.java)
+        val intent = Intent(this, PropertyActivity::class.java)
         startActivity(intent)
     }
 
-    fun onCustomInviteClicked(@Suppress("UNUSED_PARAMETER") view: View) {
-        val intent = Intent(this, ProductsActivity::class.java)
-        startActivity(intent)
+    fun onManualSurveyClicked(@Suppress("UNUSED_PARAMETER") view: View) {
+        StoryEngine.runStory("manual_survey")
     }
 }

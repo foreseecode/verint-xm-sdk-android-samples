@@ -36,10 +36,10 @@
             android:layout_marginTop="5dp"
             android:textAlignment="center"
             android:gravity="fill_horizontal"
-            android:text="@string/significant_event_desc" />
+            android:text="@string/property_desc" />
 
         <TextView
-            android:id="@+id/significantEventTextView"
+            android:id="@+id/propertyTextView"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_margin="10dp"
