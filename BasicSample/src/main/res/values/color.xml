@@ -10,4 +10,5 @@
     <color name="colorPrimaryDark">@color/verint_blue</color>
     <color name="colorAccent">@color/verint_azure</color>
     <color name="textColor">@color/verint_coal</color>
+    <color name="ic_launcher_background">@color/verint_blue</color>
 </resources>
