@@ -12,7 +12,20 @@ class AdvancedSampleApplication : Application() {
 
         // Notify ForeSee SDK of application start
         Core.setDebugLogEnabled(true)
-        Core.setUserId("SJL - DT Event test")
+        Core.setSDKListener(object : Core.VerintSDKListener {
+            override fun onSDKStarted() {
+                Core.setUserId("SJL - DT Event test")
+            }
+
+            override fun onSDKStarted(p0: Core.VerintError?, p1: String?) {
+            }
+
+            override fun onSDKFailedToStart(
+                p0: Core.VerintError?,
+                p1: String?
+            ) {
+            }
+        })
         Core.start(this)
     }
 }
