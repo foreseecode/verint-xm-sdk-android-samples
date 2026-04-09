@@ -2,7 +2,7 @@
 <resources>
     <string name="hello">This sample demonstrates some features of Rules Engine in the Verint SDK. Follow the instructions below to check eligibility.</string>
     <string name="page_views_button">1. Invite triggered by page views</string>
-    <string name="page_views_desc">Page views criteria is the number of activities that the user must view in a single app session before they are eligible to be invited to participate in this measure’s survey. This count is reset when the app is put into the background. In this sample, the invite will be triggered after 3 page views.</string>
+    <string name="page_views_desc">Page views criteria is the number of activities that the user must view in a single app session before they are eligible to be invited to participate in this measure’s survey. This count is reset when the app is removed from memory. \n\nIn this sample, the invite will be triggered after 3 page views. \n\nNote that the required number of page views may have already been reached before opening this page, e.g. through opening and reopening the app without the app being removed from memory. </string>
     <string name="launch_count_button">2. Invite triggered by launch count</string>
     <string name="launch_count_desc">Launch count criteria is the number of times the app is launched before the user is eligible for an invitation to participate in this measure’s survey. In this sample, the invite will be triggered after 5 launch counts. Please try to background/foreground the app 3 times.</string>
     <string name="manual_launch_button">4. Ad-hoc Survey example</string>
