@@ -6,7 +6,6 @@ import android.view.View
 import android.widget.Button
 import android.widget.TextView
 import com.verint.xm.sdk.StoryEngine
-import com.verint.xm.sdk.SurveyManagement
 
 class PageActivity : BaseActivity() {
 
@@ -43,8 +42,6 @@ class PageActivity : BaseActivity() {
 
     override fun onResume() {
         super.onResume()
-
-        SurveyManagement.checkIfEligibleForSurvey()
     }
 
     @Suppress("UNUSED_VARIABLE")

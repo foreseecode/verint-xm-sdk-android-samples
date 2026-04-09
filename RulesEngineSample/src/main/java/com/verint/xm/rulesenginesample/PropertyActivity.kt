@@ -4,7 +4,6 @@ import android.os.Bundle
 import android.view.View
 import android.widget.TextView
 import com.verint.xm.sdk.StoryEngine
-import com.verint.xm.sdk.SurveyManagement
 
 class PropertyActivity : BaseActivity() {
 

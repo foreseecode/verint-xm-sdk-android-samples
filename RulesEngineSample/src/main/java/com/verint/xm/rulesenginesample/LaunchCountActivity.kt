@@ -1,7 +1,6 @@
 package com.verint.xm.rulesenginesample
 
 import android.os.Bundle
-import com.verint.xm.sdk.SurveyManagement
 
 class LaunchCountActivity : BaseActivity() {
 
@@ -15,7 +14,5 @@ class LaunchCountActivity : BaseActivity() {
 
     override fun onResume() {
         super.onResume()
-
-        SurveyManagement.checkIfEligibleForSurvey()
     }
 }
