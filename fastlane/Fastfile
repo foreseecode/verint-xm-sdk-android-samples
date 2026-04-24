@@ -42,11 +42,6 @@ platform :android do
             gradle(task: "clean :CustomInSessionInvite:assembleDebug")
         end
 
-    desc "Make a Digital Sample app QA build"
-        lane :build_digital_sample_qa do
-            gradle(task: "clean :DigitalSample:assembleDebug")
-        end
-
     desc "Make a Kotlin Sample app QA build"
         lane :build_kotlin_sample_qa do
             gradle(task: "clean :KotlinSample:assembleDebug")
