@@ -20,6 +20,8 @@ class MainActivity : BaseActivity() {
     }
 
     fun onPageViewsClicked(@Suppress("UNUSED_PARAMETER") view: View) {
+        Core.resetState()
+
         PageActivity.pageId = 1
         // Invite will be triggered after 3 page views
         val intent = Intent(this, PageActivity::class.java)
@@ -27,12 +29,16 @@ class MainActivity : BaseActivity() {
     }
 
     fun onLaunchCountClicked(@Suppress("UNUSED_PARAMETER") view: View) {
+        Core.resetState()
+
         // Invite will be triggered after 5 launch count
         val intent = Intent(this, LaunchCountActivity::class.java)
         startActivity(intent)
     }
 
     fun onSignificantEventClicked(@Suppress("UNUSED_PARAMETER") view: View) {
+        Core.resetState()
+
         // Invite will be triggered after 5 launch count
         val intent = Intent(this, SignificantEventActivity::class.java)
         startActivity(intent)
