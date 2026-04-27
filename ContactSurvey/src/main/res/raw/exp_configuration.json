@@ -1,9 +1,8 @@
 {
-	"customerId": "iJRdWzEqNatz7F3INKB7qg==",
 	"repeatDaysAfterDecline":5,
 	"repeatDaysAfterComplete":5,
 	"repeatDaysAfterAccept":3,
-	"notificationType":"IN_SESSION",
+	"notificationType":"CONTACT",
     "cppParameters":
     {
         "sample_app":"Contact Survey 2.0"
