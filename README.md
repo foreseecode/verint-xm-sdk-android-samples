@@ -27,6 +27,12 @@ The project contains the following examples, all of which can be installed using
 
 ---
 
+## Rules Engine Sample
+
+This example shows the Rules Engine feature of the SDK, showcasing the use of stories to launch invitations and surveys.
+
+---
+
 ## Advanced Sample
 
 This example shows some more advanced features of the SDK, showcasing different invitation criteria and an example of a custom invitation.

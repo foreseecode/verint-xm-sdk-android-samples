@@ -1,0 +1,13 @@
+<resources>
+    <!-- Verint base colors -->
+    <color name="verint_quartz">#E9ECF2</color>
+    <color name="verint_blue">#007AFF</color>
+    <color name="verint_coal">#3A475A</color>
+    <color name="verint_azure">#00A2E7</color>
+    
+    <!-- System analogues -->
+    <color name="colorPrimary">@color/verint_quartz</color>
+    <color name="colorPrimaryDark">@color/verint_blue</color>
+    <color name="colorAccent">@color/verint_azure</color>
+    <color name="textColor">@color/verint_coal</color>
+</resources>
