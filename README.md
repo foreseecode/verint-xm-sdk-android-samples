@@ -51,12 +51,6 @@ This example shows how to use custom UI for a survey invite. Two types of custom
 
 ---
 
-## Digital Sample
-
-This example shows how to use the Digital module. 
-
----
-
 ## Kotlin Sample
 
 This example shows how to use the SDK in a kotlin project, and is equivalent to the BasicSample project.
