@@ -2,6 +2,9 @@
 format_version: '11'
 default_step_lib_source: 'https://github.com/bitrise-io/bitrise-steplib.git'
 project_type: android
+trigger_map:
+- push_branch: "*"
+  workflow: Build-All
 workflows:
   _Clone-Repo:
     steps:
@@ -165,7 +168,7 @@ workflows:
     before_run:
     - _Setup-For-All-Workflows
     - _Clone-Scripts-Repo
-  Build-All-QA:
+  Build-All:
     before_run:
       - _Setup-For-All-Workflows
       - _Clone-Scripts-Repo
